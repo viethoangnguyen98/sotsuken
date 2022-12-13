@@ -121,6 +121,55 @@
                      <p class="center" align="center">運転に不安を感じている方はこちら<br>岡山県警察HP</p> </li>           
         </div>
     </div>
+
+    <script type="text/javascript" src="javascript/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+          // 文字サイズ変更ボタン
+          $(function () {
+            // クッキー（fontSize）があれば読み込む
+            let fz = $.cookie('fontSize');
+            
+            if (fz) {
+              // サイズ変更ボタンから背景色と文字色のCSSを外す
+              $('.bl_sizeBtn').removeClass('is_active');
+              
+              // クッキーに保存されたidと一致したら適用
+              if (fz == 'fz_sm') {
+                $('html').css('font-size', '52.5%');
+                $('#fz_sm').addClass('is_active');
+              } else if (fz == 'fz_md') {// デフォルトスタイル
+                $('html').css('font-size', '62.5%');
+                $('#fz_md').addClass('is_active');
+              } else if (fz == 'fz_lg') {
+                $('html').css('font-size', '72.5%');
+                $('#fz_lg').addClass('is_active');
+              }
+            }
+            
+            //サイズ変更時にクッキーへ保存
+            $('.bl_sizeBtn').click(function () {
+              // クリックされたbuttonのidをクッキー（fontSize）に保存（有効期限は7日）
+              $.cookie('fontSize', this.id, { expires: 7 });
+              
+              // サイズ変更ボタンから背景色と文字色のCSSを外す
+              $('.bl_sizeBtn').removeClass('is_active');
+              
+              // クリックされたbuttonのidと一致したら適用
+              if (this.id == 'fz_sm') {
+                $('html').css('font-size', '52.5%');
+                $(this).addClass('is_active');
+              } else if (this.id == 'fz_md') {// デフォルトスタイル
+                $('html').css('font-size', '62.5%');
+                $(this).addClass('is_active');
+              } else if (this.id == 'fz_lg') {
+                $('html').css('font-size', '72.5%');
+                $(this).addClass('is_active');
+              }
+            });
+          });
+        </script>
         <!--  
        <li> <div class="mado">
                 <a href="https://www.npa.go.jp/policies/application/license_renewal/pdf/madoguchi_R03.pdf">
