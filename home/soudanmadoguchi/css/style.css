@@ -1,0 +1,109 @@
+/* 見出しをセンターに */
+H1 { text-align: center }
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+} 
+
+
+/* 具体例画像編集 */
+#image {
+    width:left;
+    margin-left : 50px;
+    margin-bottom: -100px;
+  }
+
+/* 左側に空白 */
+.mgl-47{
+    margin-left : 47px;
+}
+
+
+/* 行間 */
+p{
+    line-height: 2;
+    margin-left : 500px;
+}
+
+
+/* マップ */
+.map{
+    width:left;
+    margin-left : 50px;
+}
+    .map iframe{
+        height:300px;
+    }
+@media only screen and (max-width: 768px) {
+    .map{
+        width:95%;
+    }
+        .map iframe{
+            height:250px;
+        }
+}
+
+/* 背景 */
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:#e1eceb;
+  }
+
+/* HP案内 */
+  .keisatu {
+    width: 300px;        /* 画像の横幅（自由に指定） */
+    position: relative;  /* 帯の表示位置の基準とする */
+    margin-left : 47px;
+  }
+  
+  .keisatu img {
+    width: 100%;
+    
+  }
+  
+  .keisatu i {
+    color: #fff;
+    text-align: center;
+    width: 100%;         /* 画像の幅に合わせるため */
+    padding: 10px 0;
+    position: absolute;  /* relativeの要素を基準にする */
+    left: 0;             /* 基準からみて左寄せ */
+    bottom: 0;           /* 基準からみて下寄せ */
+    background: rgba(0,0,0,0.5);  /* 半透明の背景。 */
+  }
+
+
+  .mado {
+    width: 300px;        /* 画像の横幅（自由に指定） */
+    position: relative;  /* 帯の表示位置の基準とする */
+    margin-left : 47px;
+  }
+  
+  .mado img {
+    width: 100%;
+    
+  }
+  
+  .mado i {
+    color: #fff;
+    text-align: center;
+    width: 100%;         /* 画像の幅に合わせるため */
+    padding: 10px 0;
+    position: absolute;  /* relativeの要素を基準にする */
+    left: 0;             /* 基準からみて左寄せ */
+    bottom: 0;           /* 基準からみて下寄せ */
+    background: rgba(0,0,0,0.5);  /* 半透明の背景。 */
+  }
+
+  .hp ul {
+    display: flex;
+    justify-content: center;
+  }
